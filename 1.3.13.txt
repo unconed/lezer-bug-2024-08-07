@@ -1,0 +1,46 @@
+yarn run v1.22.22
+$ ts-node src/main.ts
+Program                                                     
+  GlobalDeclaration                                         
+    VariableDeclaration                                     
+      TypeSpecifier                                         
+        Struct                                              
+          struct                                            
+          Identifier                                        
+          StructDeclarationList                             
+            StructDeclaration                               
+              TypeSpecifier                                 
+                float                                       
+              StructDeclarationSpecifier                    
+                PrivateIdentifier                           
+                  Identifier                                
+            StructDeclaration                               
+              TypeSpecifier                                 
+                vec3                                        
+              StructDeclarationSpecifier                    
+                PrivateIdentifier                           
+                  Identifier                                
+      SingleDeclaration                                     
+        DeclarationSpecifier                                
+          Identifier                                        
+  ⚠                                                         
+  GlobalDeclaration                                         
+    VariableDeclaration                                     
+      TypeSpecifier                                         
+        Struct                                              
+          struct                                            
+          Identifier                                        
+          StructDeclarationList                             
+            StructDeclaration                               
+              TypeSpecifier                                 
+                float                                       
+              StructDeclarationSpecifier                    
+                PrivateIdentifier                           
+                  Identifier                                
+            StructDeclaration                               
+              TypeSpecifier                                 
+                vec3                                        
+              StructDeclarationSpecifier                    
+                PrivateIdentifier                           
+                  Identifier                                
+Done in 0.70s.

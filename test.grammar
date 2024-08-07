@@ -1,0 +1,37 @@
+@top Program { unit }
+@skip { space }
+
+k<term> { @specialize[@name={term}]<Identifier, term> }
+t<term> { @specialize[@name={term}]<Identifier, term> }
+
+unit { externalDeclaration }
+externalDeclaration { GlobalDeclaration }
+
+GlobalDeclaration {
+  (
+    VariableDeclaration
+  ) semicolon
+}
+
+VariableDeclaration { TypeSpecifier (SingleDeclaration (comma SingleDeclaration)*)? }
+SingleDeclaration { DeclarationSpecifier }
+DeclarationSpecifier { Identifier }
+
+PrivateIdentifier { Identifier }
+
+TypeSpecifier { t<"float"> | t<"vec3"> | Struct }
+
+Struct { k<'struct'> Identifier? '{' StructDeclarationList '}' }
+StructDeclarationList { StructDeclaration* }
+StructDeclaration { TypeSpecifier structDeclaratorList semicolon }
+structDeclaratorList { StructDeclarationSpecifier (comma StructDeclarationSpecifier)* }
+StructDeclarationSpecifier { PrivateIdentifier }
+
+@tokens {
+  space { std.whitespace+ }
+
+  Identifier { $[A-Za-z_] $[A-Za-z0-9_]* }
+
+  comma { ',' }
+  semicolon { ";" }
+}

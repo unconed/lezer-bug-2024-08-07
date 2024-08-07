@@ -1,0 +1,20 @@
+{
+  "name": "lezer-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "ts-node src/main.ts",
+    "generate": "lezer-generator test.grammar -o src/test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lezer/common": "^1.2.1",
+    "@lezer/generator": "^1.7.1",
+    "@lezer/lr": "^1.4.2",
+    "@types/node": "^20.14.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
